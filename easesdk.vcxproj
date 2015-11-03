@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{AD04A8B5-BDDD-494F-A3FF-B4D0AF712C7E}</ProjectGuid>
+    <RootNamespace>EaseSDK</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)OutPutObj\$(ProjectName)\$(PlatformTarget)\$(Configuration)\</OutDir>
+    <IntDir>$(OutDir)</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)OutPutObj\$(ProjectName)\$(PlatformTarget)\$(Configuration)\</OutDir>
+    <IntDir>$(OutDir)</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>thirdparty;include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>thirdparty;include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="include\config.h" />
+    <ClInclude Include="include\easesdk.h" />
+    <ClInclude Include="thirdparty\curl\curl.h" />
+    <ClInclude Include="thirdparty\curl\curlbuild.h" />
+    <ClInclude Include="thirdparty\curl\curlcpp.h" />
+    <ClInclude Include="thirdparty\curl\curlrules.h" />
+    <ClInclude Include="thirdparty\curl\curlver.h" />
+    <ClInclude Include="thirdparty\curl\easy.h" />
+    <ClInclude Include="thirdparty\curl\mprintf.h" />
+    <ClInclude Include="thirdparty\curl\multi.h" />
+    <ClInclude Include="thirdparty\curl\stdcheaders.h" />
+    <ClInclude Include="thirdparty\curl\typecheck-gcc.h" />
+    <ClInclude Include="thirdparty\json\autolink.h" />
+    <ClInclude Include="thirdparty\json\config.h" />
+    <ClInclude Include="thirdparty\json\features.h" />
+    <ClInclude Include="thirdparty\json\forwards.h" />
+    <ClInclude Include="thirdparty\json\json.h" />
+    <ClInclude Include="thirdparty\json\json_batchallocator.h" />
+    <ClInclude Include="thirdparty\json\json_tool.h" />
+    <ClInclude Include="thirdparty\json\reader.h" />
+    <ClInclude Include="thirdparty\json\value.h" />
+    <ClInclude Include="thirdparty\json\writer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\easesdk.cpp" />
+    <ClCompile Include="thirdparty\curl\curlcpp.cpp" />
+    <ClCompile Include="thirdparty\json\json_reader.cpp" />
+    <ClCompile Include="thirdparty\json\json_value.cpp" />
+    <ClCompile Include="thirdparty\json\json_writer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="thirdparty\json\json_internalarray.inl" />
+    <None Include="thirdparty\json\json_internalmap.inl" />
+    <None Include="thirdparty\json\json_valueiterator.inl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

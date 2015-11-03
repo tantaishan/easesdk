@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="curlcpp">
+      <UniqueIdentifier>{f43d2c66-ea0b-44b3-80e8-3e79f5818685}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="json">
+      <UniqueIdentifier>{d81c9e81-c3af-4849-928d-6dae7140d9f4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\easesdk.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="thirdparty\curl\curl.h">
+      <Filter>curlcpp</Filter>
+    </ClInclude>
+    <ClInclude Include="thirdparty\curl\curlbuild.h">
+      <Filter>curlcpp</Filter>
+    </ClInclude>
+    <ClInclude Include="thirdparty\curl\curlcpp.h">
+      <Filter>curlcpp</Filter>
+    </ClInclude>
+    <ClInclude Include="thirdparty\curl\curlrules.h">
+      <Filter>curlcpp</Filter>
+    </ClInclude>
+    <ClInclude Include="thirdparty\curl\curlver.h">
+      <Filter>curlcpp</Filter>
+    </ClInclude>
+    <ClInclude Include="thirdparty\curl\easy.h">
+      <Filter>curlcpp</Filter>
+    </ClInclude>
+    <ClInclude Include="thirdparty\curl\mprintf.h">
+      <Filter>curlcpp</Filter>
+    </ClInclude>
+    <ClInclude Include="thirdparty\curl\multi.h">
+      <Filter>curlcpp</Filter>
+    </ClInclude>
+    <ClInclude Include="thirdparty\curl\stdcheaders.h">
+      <Filter>curlcpp</Filter>
+    </ClInclude>
+    <ClInclude Include="thirdparty\curl\typecheck-gcc.h">
+      <Filter>curlcpp</Filter>
+    </ClInclude>
+    <ClInclude Include="thirdparty\json\autolink.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="thirdparty\json\config.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="thirdparty\json\features.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="thirdparty\json\forwards.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="thirdparty\json\json.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="thirdparty\json\json_batchallocator.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="thirdparty\json\json_tool.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="thirdparty\json\reader.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="thirdparty\json\value.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="thirdparty\json\writer.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="include\config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\easesdk.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="thirdparty\curl\curlcpp.cpp">
+      <Filter>curlcpp</Filter>
+    </ClCompile>
+    <ClCompile Include="thirdparty\json\json_reader.cpp">
+      <Filter>json</Filter>
+    </ClCompile>
+    <ClCompile Include="thirdparty\json\json_value.cpp">
+      <Filter>json</Filter>
+    </ClCompile>
+    <ClCompile Include="thirdparty\json\json_writer.cpp">
+      <Filter>json</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="thirdparty\json\json_internalarray.inl">
+      <Filter>json</Filter>
+    </None>
+    <None Include="thirdparty\json\json_internalmap.inl">
+      <Filter>json</Filter>
+    </None>
+    <None Include="thirdparty\json\json_valueiterator.inl">
+      <Filter>json</Filter>
+    </None>
+  </ItemGroup>
+</Project>
